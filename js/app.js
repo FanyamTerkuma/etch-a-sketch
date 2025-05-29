@@ -18,6 +18,10 @@ const button = document.querySelector('.btn');
 
 button.addEventListener('click', () => {
     let customGridDimension = prompt('Enter custom dimension for new layout');
+    if (customGridDimension > 100) {
+        alert('Max dimension is 100');
+        return;
+    }
     if (customGridDimension != null) {
         //remove all children of container div
         if (container.hasChildNodes()) {
